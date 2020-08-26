@@ -6,6 +6,33 @@
 </head>
 <body>
 <script>
+const Tasks = [
+      {content:'机を片付ける、',genre:'掃除'},
+      {content:'牛乳を買う、',genre:'買い物'},
+      {content:'散歩する、',genre:'運動'},
+    ];
+
+    const template = () => {
+      console.log('=====================');
+      console.log('現在持っているタスク');
+      console.log('=====================');
+    for (let i = 0; i < Tasks.length; i++) {
+        const task = Tasks[i];
+        console.log(`${i}:[内容]${task.content}[ジャンル]${task.genre}`);
+      }
+    }
+
+
+    template();
+
+    const menu = prompt('タスクを入力してください');
+    const type = prompt('ジャンルを入力してください');
+    Tasks.push({content:menu,genre:type});
+    alert('新しいタスクを追加しました');
+
+    template();
+
+    prompt('「確認、追加、削除、終了」の4ついずれかを入力してください');
 
 </script>
 </body>
